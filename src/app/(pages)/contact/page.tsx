@@ -1,5 +1,3 @@
-'use client';
-
 export default function Contact() {
   return (
     <div className="max-w-4xl mx-auto px-4">
@@ -11,7 +9,7 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="bg-white p-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(0,128,0,0.12)] transition-shadow duration-300">
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">Send us a Message</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" action="/api/contact" method="POST">
             <div className="group">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
               <input 
@@ -20,6 +18,7 @@ export default function Contact() {
                 name="name" 
                 className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 transition-all duration-300 hover:border-green-400"
                 placeholder="Your name"
+                required
               />
             </div>
             <div className="group">
@@ -30,6 +29,7 @@ export default function Contact() {
                 name="email" 
                 className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 transition-all duration-300 hover:border-green-400"
                 placeholder="your.email@example.com"
+                required
               />
             </div>
             <div className="group">
@@ -40,6 +40,7 @@ export default function Contact() {
                 rows={4} 
                 className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 transition-all duration-300 hover:border-green-400"
                 placeholder="How can we help you?"
+                required
               ></textarea>
             </div>
             <button 

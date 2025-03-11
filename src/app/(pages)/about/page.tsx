@@ -44,7 +44,7 @@ export default function About() {
 
   useEffect(() => {
     startCounting();
-  }, [startCounting]);
+  }, [startCounting, stats]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 pt-8">
@@ -70,10 +70,10 @@ export default function About() {
 
       {/* Stats Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-        {stats.map((stat, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-all duration-300 hover:scale-105">
+        {stats.map((stat, i) => (
+          <div key={i} className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-all duration-300 hover:scale-105">
             <div className="text-3xl font-bold text-green-600 mb-2">
-              {counts[index]}{stat.suffix}
+              {counts[i]}{stat.suffix}
             </div>
             <div className="text-gray-600">{stat.label}</div>
           </div>
@@ -99,8 +99,8 @@ export default function About() {
               { value: "Quality Assurance", icon: "✨" },
               { value: "Integrity & Transparency", icon: "🤝" },
               { value: "Innovation", icon: "💡" }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg transform transition-all duration-300 hover:bg-gray-100">
+            ].map((item, i) => (
+              <div key={i} className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg transform transition-all duration-300 hover:bg-gray-100">
                 <span className="text-2xl">{item.icon}</span>
                 <span className="text-gray-700 font-medium">{item.value}</span>
               </div>

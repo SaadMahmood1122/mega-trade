@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -47,7 +47,7 @@ export default function Home() {
             >
               <Link href={`/products/${id}`} className="block">
                 <div className="relative h-48 overflow-hidden">
-                  <Image 
+                  <Image
                     src={[
                       "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&auto=format&fit=crop",
                       "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&auto=format&fit=crop",

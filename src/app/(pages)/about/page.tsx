@@ -1,14 +1,14 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 
 export default function About() {
-  const stats = [
+  const stats = useMemo(() => [
     { endNumber: 10, label: "Years of Excellence", suffix: "+" },
     { endNumber: 5000, label: "Happy Customers", suffix: "+" },
     { endNumber: 1000, label: "Products", suffix: "+" },
     { endNumber: 99, label: "Satisfaction Rate", suffix: "%" }
-  ];
+  ], []);
 
   const [counts, setCounts] = useState(stats.map(() => 0));
 

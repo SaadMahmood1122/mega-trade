@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Mock product data
 const products = [
@@ -59,10 +60,11 @@ export default function Products() {
             className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)] transition-all duration-300 overflow-hidden group"
           >
             <div className="relative h-48 overflow-hidden">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-in-out"
+                fill
+                className="object-cover transform group-hover:scale-125 transition-transform duration-700 ease-in-out"
               />
             </div>
             <div className="p-6">

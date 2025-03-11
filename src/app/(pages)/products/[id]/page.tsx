@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Mock product data (same as in products page)
 const products = [
@@ -75,11 +76,12 @@ export default function ProductPage() {
     <div className="max-w-4xl mx-auto">
       <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
         <div className="md:flex">
-          <div className="md:flex-shrink-0">
-            <img
+          <div className="md:flex-shrink-0 relative h-64 w-full md:h-[400px] md:w-96">
+            <Image
               src={product.image}
               alt={product.name}
-              className="h-64 w-full object-cover md:h-full md:w-96"
+              fill
+              className="object-cover"
             />
           </div>
           <div className="p-8">

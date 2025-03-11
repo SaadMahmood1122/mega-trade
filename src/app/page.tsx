@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -46,14 +47,15 @@ export default function Home() {
             >
               <Link href={`/products/${id}`} className="block">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
+                  <Image 
                     src={[
                       "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=800&auto=format&fit=crop",
                       "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&auto=format&fit=crop",
                       "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=800&auto=format&fit=crop"
                     ][id - 1]} 
                     alt={["Fresh Organic Apples", "Premium Basmati Rice", "Fresh Broccoli"][id - 1]}
-                    className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300 ease-in-out"
                   />
                 </div>
                 <div className="p-4 md:p-6">
@@ -102,7 +104,7 @@ export default function Home() {
             title: "Contact",
             description: "Get in touch with us for bulk orders, special requests, or any inquiries."
           }
-        ].map((link, index) => (
+        ].map((link) => (
           <div
             key={link.title}
             className="transform transition-transform duration-200 hover:scale-[1.03]"
@@ -145,7 +147,7 @@ export default function Home() {
         </h2>
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
-            Have questions? We're here to help! Contact us for any inquiries about our products or services.
+            Have questions? We&apos;re here to help! Contact us for any inquiries about our products or services.
           </p>
           <div className="transform transition-transform duration-200 hover:scale-105 active:scale-95">
             <Link href="/contact" className="inline-block bg-green-600 text-white py-2 px-4 md:py-2.5 md:px-6 rounded-md hover:bg-green-700 transition-colors duration-200 text-sm md:text-base font-semibold">

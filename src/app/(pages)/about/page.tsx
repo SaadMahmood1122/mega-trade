@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function About() {
   const stats = [
@@ -12,8 +12,8 @@ export default function About() {
 
   const [counts, setCounts] = useState(stats.map(() => 0));
 
-  useEffect(() => {
-    const duration = 2000; // 2 seconds duration
+  const startCounting = useCallback(() => {
+    const duration = 2000;
     const frameRate = 60;
     const totalFrames = (duration / 1000) * frameRate;
 
@@ -40,7 +40,11 @@ export default function About() {
         }
       }, 1000 / frameRate);
     });
-  }, []);
+  }, [stats]);
+
+  useEffect(() => {
+    startCounting();
+  }, [startCounting]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 pt-8">
@@ -110,7 +114,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-green-800">Our Commitment</h2>
           <p className="text-gray-600 leading-relaxed">
-            At Mega Trade, we're committed to sustainability, quality, and customer satisfaction. 
+            At Mega Trade, we&apos;re committed to sustainability, quality, and customer satisfaction. 
             We carefully select our products and partners to ensure we deliver only the best to our customers.
             Our team works tirelessly to maintain the highest standards in everything we do.
           </p>

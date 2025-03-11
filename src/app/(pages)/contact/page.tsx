@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function Contact() {
   return (
     <div className="max-w-4xl mx-auto px-4">

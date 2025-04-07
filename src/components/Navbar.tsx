@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-2xl font-bold text-green-600 transform hover:scale-105 transition-all duration-300" onClick={closeMenu}>
-              Mega Trade
+              Mega Foods
             </Link>
           </div>
 

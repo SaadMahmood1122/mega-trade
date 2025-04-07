@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Barlow } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/Navbar";
+import Navigation from "./components/Navigation";
 import Footer from "../components/Footer";
 import FloatingContact from "../components/FloatingContact";
 
-const barlow = Barlow({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mega Trade",
-  description: "Your one-stop destination for fresh, organic produce and premium groceries.",
+  title: "Mega Trade - Fresh & Healthy Products",
+  description: "Your one-stop destination for fresh fruits, vegetables, and premium rice.",
 };
 
 export default function RootLayout({
@@ -23,9 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${barlow.className} flex flex-col min-h-screen`}>
-        <Navbar />
-        <main className="container mx-auto px-0 pt-16 py-8 flex-grow">
+      <body className={inter.className}>
+        <Navigation />
+        <main className="container mx-auto px-4 pt-28 pb-8 flex-grow">
           {children}
         </main>
         <Footer />

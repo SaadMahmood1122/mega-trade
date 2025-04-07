@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Mega Trade</h3>
+            <h3 className="text-xl font-bold mb-4">Mega Foods</h3>
             <p className="text-gray-400">
               Your trusted destination for fresh, organic produce and premium groceries.
             </p>
@@ -53,9 +53,9 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: contact@megatrade.com</li>
+              <li>Email: contact@megafoods.com</li>
               <li>Phone: (555) 123-4567</li>
-              <li>Address: 123 Trade Street</li>
+              <li>Address: 123 Foods Street</li>
               <li>Business City, ST 12345</li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Mega Trade. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mega Foods. All rights reserved.</p>
         </div>
       </div>
     </footer>

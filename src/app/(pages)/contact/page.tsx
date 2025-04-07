@@ -1,9 +1,11 @@
 export default function Contact() {
   return (
-    <div className="max-w-4xl mx-auto px-4">
-      <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 hover:text-green-600 transition-colors">
-        Get in Touch
-      </h1>
+    <div className="max-w-4xl mx-auto">
+      <div className="bg-gradient-to-r from-green-50 to-white rounded-2xl p-8 mb-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
+          Get in Touch
+        </h1>
+      </div>
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Form */}
@@ -65,7 +67,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-600">Email</p>
-                <p className="text-base font-medium text-gray-800 group-hover:text-green-600 transition-colors">contact@megatrade.com</p>
+                <p className="text-base font-medium text-gray-800 group-hover:text-green-600 transition-colors">contact@megafoods.com</p>
               </div>
             </div>
 
@@ -90,7 +92,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-600">Address</p>
-                <p className="text-base font-medium text-gray-800 group-hover:text-green-600 transition-colors">123 Trade Street, Business City, ST 12345</p>
+                <p className="text-base font-medium text-gray-800 group-hover:text-green-600 transition-colors">123 Foods Street, Business City, ST 12345</p>
               </div>
             </div>
           </div>

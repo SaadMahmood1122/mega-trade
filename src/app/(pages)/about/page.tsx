@@ -52,7 +52,7 @@ export default function About() {
       <div className="relative py-12 mb-16 rounded-2xl overflow-hidden bg-gradient-to-r from-green-600 to-green-800">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Mega Trade</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Mega Foods</h1>
           <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto px-4">
             Your trusted destination for high-quality products and exceptional service since 2010
           </p>
@@ -62,7 +62,7 @@ export default function About() {
       {/* Vision Section */}
       <div className="mb-16">
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto text-center">
-          Welcome to Mega Trade, where we believe in providing our customers with the finest quality products
+          Welcome to Mega Foods, where we believe in providing our customers with the finest quality products
           and an unmatched shopping experience. Our journey began with a simple vision: to revolutionize
           the way people shop for their daily needs.
         </p>
@@ -114,7 +114,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-green-800">Our Commitment</h2>
           <p className="text-gray-600 leading-relaxed">
-            At Mega Trade, we&apos;re committed to sustainability, quality, and customer satisfaction. 
+            At Mega Foods, we&apos;re committed to sustainability, quality, and customer satisfaction. 
             We carefully select our products and partners to ensure we deliver only the best to our customers.
             Our team works tirelessly to maintain the highest standards in everything we do.
           </p>
